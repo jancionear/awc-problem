@@ -6,8 +6,6 @@
 //! 5. Make the client live longer by spawning a future that captures it
 //! 6. The system is stopped
 //! 7. Client is dropped and ConnectionPool destructor spawns a task to close the pooled connection. This panics because the system is already stopped.
-//!
-//! In reality 7. happens before 6. and the panic doesn't occur.
 
 use std::time::Duration;
 
